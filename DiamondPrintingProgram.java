@@ -8,6 +8,16 @@ package com.mycompany.diamondprintingprogram;
  *
  * @author ade_f
  */
+
+//Name: Ade Alleyne-Forte
+
+//Course: ITSE 2321_Practice
+
+//Program Status: Complete
+
+// Description: This app uses a series of for loops to create a diamond shape pattern
+
+
 public class DiamondPrintingProgram {
 
     public static void main(String[] args) {
