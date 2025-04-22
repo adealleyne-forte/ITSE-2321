@@ -15,28 +15,30 @@ package com.mycompany.shapehierarchy;
 
 //Program Status: Complete
 
-// Description: Square subclass of the TwoDimensionalClass 
+// Description: Cube subclass of the Three Dimensional Class 
 
-public class Square extends TwoDimensionalShape {
+
+public class Cube extends ThreeDimensionalShape {
     private final double side;
 
-    public Square(double side) {
-        super("Square");
+    public Cube(double side) {
+        super("Cube");
         this.side = side;
-    }
-
-    public double getSide() {
-        return side;
     }
 
     @Override
     public double getArea() {
-        return side * side;
+        return 6 * side * side;
+    }
+
+    @Override
+    public double getVolume() {
+        return side * side * side;
     }
 
     @Override
     public String toString() {
-        return String.format("%s with side %.2f", super.toString(), getSide());
+        return String.format("%s with side %.2f", super.toString(), side);
     }
 }
 

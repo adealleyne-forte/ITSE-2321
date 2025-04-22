@@ -15,28 +15,29 @@ package com.mycompany.shapehierarchy;
 
 //Program Status: Complete
 
-// Description: Square subclass of the TwoDimensionalClass 
+// Description: Circle subclass extended by the TwoDimensionalClass 
 
-public class Square extends TwoDimensionalShape {
-    private final double side;
 
-    public Square(double side) {
-        super("Square");
-        this.side = side;
+public class Circle extends TwoDimensionalShape {
+    private final double radius;
+
+    public Circle(double radius) {
+        super("Circle");
+        this.radius = radius;
     }
 
-    public double getSide() {
-        return side;
+    public double getRadius() {
+        return radius;
     }
 
     @Override
     public double getArea() {
-        return side * side;
+        return Math.PI * radius * radius;
     }
 
     @Override
     public String toString() {
-        return String.format("%s with side %.2f", super.toString(), getSide());
+        return String.format("%s with radius %.2f", super.toString(), getRadius());
     }
 }
 

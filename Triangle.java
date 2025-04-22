@@ -15,28 +15,27 @@ package com.mycompany.shapehierarchy;
 
 //Program Status: Complete
 
-// Description: Square subclass of the TwoDimensionalClass 
+// Description: Triangle subclass of the TwoDimensionalClass 
 
-public class Square extends TwoDimensionalShape {
-    private final double side;
 
-    public Square(double side) {
-        super("Square");
-        this.side = side;
-    }
+public class Triangle extends TwoDimensionalShape {
+    private final double base;
+    private final double height;
 
-    public double getSide() {
-        return side;
+    public Triangle(double base, double height) {
+        super("Triangle");
+        this.base = base;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return side * side;
+        return 0.5 * base * height;
     }
 
     @Override
     public String toString() {
-        return String.format("%s with side %.2f", super.toString(), getSide());
+        return String.format("%s with base %.2f and height %.2f", super.toString(), base, height);
     }
 }
 
