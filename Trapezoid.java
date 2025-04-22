@@ -15,19 +15,20 @@ package com.mycompany.point;
 
 //Program Status: Complete
 
-// Description: This code establishes the Rectangle subclass
+// Description: This code establishes the Trapzoid subclass
 
 
-public class Rectangle extends Quadrilateral {
+public class Trapezoid extends Quadrilateral {
 
-    public Rectangle(Point p1, Point p2, Point p3, Point p4) {
+    public Trapezoid(Point p1, Point p2, Point p3, Point p4) {
         super(p1, p2, p3, p4);
     }
 
     @Override
     public double area() {
-        double length = Math.abs(p1.getX() - p2.getX());
-        double width = Math.abs(p2.getY() - p3.getY());
-        return length * width;
+        double base1 = Math.abs(p1.getX() - p2.getX());
+        double base2 = Math.abs(p3.getX() - p4.getX());
+        double height = Math.abs(p1.getY() - p3.getY());
+        return ((base1 + base2) * height) / 2;
     }
 }
