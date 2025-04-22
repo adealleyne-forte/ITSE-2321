@@ -2,37 +2,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.employee;
+package com.mycompany.payrollsystemmodification;
 
 /**
  *
  * @author ade_f
  */
-public class BasePlusCommissionEmployee extends CommissionEmployee
-{
-    private double baseSalary;
 
-    public BasePlusCommissionEmployee(String first, String last, String ssn, double gross, double commissionRate, double baseSalary){
-        super(first, last, ssn, gross, commissionRate);
-        setBaseSalary(baseSalary);
+//Name: Ade Alleyne-Forte
+
+//Course: ITSE 2321_HW10
+
+//Program Status: Complete
+
+// Description: Commisssion Employee subclass which extends the Employee superclass and establishes employees
+                //being paid on commission
+
+
+public class BasePlusCommissionEmployee extends CommissionEmployee {
+    private final double baseSalary;
+
+    public BasePlusCommissionEmployee(String firstName, String lastName, String ssn, java.time.LocalDate birthDate,
+                                      double grossSales, double commissionRate, double baseSalary) {
+        super(firstName, lastName, ssn, birthDate, grossSales, commissionRate);
+        if (baseSalary < 0.0) {
+            throw new IllegalArgumentException("Base salary must be >= 0.0");
+        }
+        this.baseSalary = baseSalary;
     }
 
-
-    public double getBaseSalary(){return this.baseSalary;}
-    public final void setBaseSalary(double baseSalary){
-        if(baseSalary < 0)
-            throw new IllegalArgumentException("Base salary cannot be negative!");
-        else
-            this.baseSalary = baseSalary;}
+    public double getBaseSalary() {
+        return baseSalary;
+    }
 
     @Override
     public double earnings() {
-        return super.earnings() + baseSalary;
+        return getBaseSalary() + super.earnings();
     }
 
     @Override
-    public String toString(){
-        return String.format("%s%s: %f%n", super.toString(), "base salary", getBaseSalary());
+    public String toString() {
+        return String.format("base-salaried %s;base salary: $%.2f", super.toString(), getBaseSalary());
     }
-
 }
