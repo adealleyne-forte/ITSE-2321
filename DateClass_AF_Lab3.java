@@ -9,6 +9,11 @@ package com.mycompany.date;
  * @author ade_f
  */
 
+//3.14 ( Class) Create a class called that includes three instance variables—a month (type ), a day (type ) and a year (type ). 
+//Provide a constructor that initializes the three instance variables and assumes that the values provided are correct. 
+//Provide a set and a get method for each instance variable. Provide a method that displays the month, day and year separated by forward slashes (). 
+//Write a test app named that demonstrates class ’s capabilities.
+
 
 
 //Name: Ade Alleyne-Forte
