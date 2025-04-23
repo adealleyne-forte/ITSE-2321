@@ -9,6 +9,11 @@ package com.mycompany.bankaccount;
  * @author ade_forte
  */
 
+//3.11 (Modified  Class) Modify class  (Fig. 3.8) to provide a method called  that withdraws money from an . 
+//Ensure that the withdrawal amount does not exceed the ’s balance. 
+//If it does, the balance should be left unchanged and the method should print a message indicating 
+//Modify class  (Fig. 3.9) to test method .
+
 //Name: Ade Alleyne-Forte
 
 //Course: ITSE 2321_HW
