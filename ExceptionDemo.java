@@ -11,7 +11,7 @@ package com.mycompany.exceptiona;
 
 //Name: Ade Alleyne-Forte
 
-//Course: ITSE 2321_HW11
+//Course: ITSE 2321_Lab11
 
 //Program Status: Complete
 
