@@ -19,6 +19,8 @@ package com.mycompany.exceptiona;
 
 // Import necessary class
 
+//This main function is also pulling from Exception class A & B
+
 import java.io.IOException;
 
 public class ExceptionDemo {
